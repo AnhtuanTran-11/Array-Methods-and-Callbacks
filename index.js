@@ -104,10 +104,10 @@ Use the higher order function getAverageGoals to do the following:
 */
 
 function getAverageGoals(getFinals) { // Array of objects
-    let average = getFinals.reduce(function(counter, game) {
+    let average = getFinals.reduce(function(counter, game) { // Creating a variable to store the answer in, using .reduce to iterate through the array of objects, it takes two parameters, a function, and a starting value for the counter.
         return counter + game["Home Team Goals"] + game["Away Team Goals"];
-    },0)/getFinals.length;
-    return average.toFixed(2);
+    },0)/getFinals.length; // let average is now a number, calculations can now occur right here
+    return average.toFixed(2); // .toFixed is an operator that takes in a parameter, 2 is in this parameter to round down to the second decimal place
    // console.log(getFinals);
 }
 console.log(getAverageGoals(getFinals(fifaData)));
